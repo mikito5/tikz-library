@@ -1,27 +1,30 @@
 \begin{tikzpicture}
-  %抵抗
+
+  % 抵抗
   \draw (0.1,0) [european resistor] to ++(3,0);
   \node at (1.55,0.45) {$R$};
 
-  %抵抗の右の配線
+  % 右側配線
   \draw (3.05,0) -- (3.9,0);
 
-  %コンデンサ
+  % コンデンサ（並列）
   \draw (3.05,0) to[C,*-*] ++(0,-2);
   \node at (2.4,-1) {$C$};
 
-  %下配線
+  % 下側配線
   \draw (0.1,-2) -- (3.9,-2);
 
-  %入力
+  % 入力端子・電圧
   \draw[thick] (0,0) circle (0.1);
   \draw[-{Latex[length=2mm]}] (0,-1.8) -- (0,-0.2);
-  \node at (-0.5,-1) {$v_{\mathrm{i}}(t)$};
+  \node at (-0.55,-1) {$v_{\mathrm{in}}(t)$};
   \draw[thick] (0,-2) circle (0.1);
 
-  %出力
+  % 出力端子・電圧
   \draw[thick] (4,0) circle (0.1);
   \draw[-{Latex[length=2mm]}] (4,-1.8) -- (4,-0.2);
-  \node at (4.6,-1) {$v_{\mathrm{o}}(t)$};
+  \node at (4.6,-1) {$v_{\mathrm{out}}(t)$};
   \draw[thick] (4,-2) circle (0.1);
+
 \end{tikzpicture}
+
